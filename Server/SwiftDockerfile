@@ -1,0 +1,11 @@
+FROM swift:5.4.1-focal
+
+LABEL maintainer="azusa <cezres@163.com>"
+
+RUN swift --version
+
+COPY . /app
+
+WORKDIR /app
+
+RUN swift build -c release
