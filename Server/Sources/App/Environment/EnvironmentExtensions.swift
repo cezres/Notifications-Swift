@@ -2,7 +2,7 @@
 //  File.swift
 //  
 //
-//  Created by azusa on 2021/6/29.
+//  Created by 翟泉 on 2022/7/13.
 //
 
 import Foundation
@@ -20,10 +20,10 @@ extension Environment {
         private(set) static var topic: String = ""
         
         fileprivate static func configure() {
-            key = Environment.get("key") ?? "/Users/azusa/Documents/AuthKey_867KZV9V3U.p8"
-            keyIdentifier = Environment.get("keyIdentifier") ?? "867KZV9V3U"
+            key = Environment.get("key") ?? "/Users/cezres/Downloads/AuthKey_3728D25F6R.p8"
+            keyIdentifier = Environment.get("keyIdentifier") ?? "3728D25F6R"
             teamIdentifier = Environment.get("teamIdentifier") ?? "2T6WKE788U"
-            topic = Environment.get("topic") ?? "com.cezres.notification"
+            topic = Environment.get("topic") ?? "com.cezres.notifications"
             
             print("""
             Environment.APNs:

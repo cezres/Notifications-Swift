@@ -10,6 +10,8 @@ func routes(_ app: Application) throws {
         return "Hello, world!"
     }
     
+    Environment.configure()
+
     try app.register(collection: TodoController())
-    try app.register(collection: NotificationController())
+    try app.register(collection: try NotificationController())
 }
