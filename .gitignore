@@ -89,3 +89,4 @@ fastlane/test_output
 
 iOSInjectionProject/
 Client/.DS_Store
+Client/Notifications/.DS_Store

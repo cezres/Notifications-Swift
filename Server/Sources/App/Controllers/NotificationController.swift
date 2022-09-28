@@ -50,8 +50,8 @@ struct NotificationController: RouteCollection {
     
     func test(req: Request) async throws -> HTTPStatus {
         let aps = APNSPayload(alert: .init(title: "Hey There", subtitle: "Subtitle", body: "Body"), hasContentAvailable: true)
-        let deviceToken = "8d6b3e2511ba7fe39b841bd7170ae250c724cbea9d736256df4b53838a5cad87"
-        try await apns.send(aps, pushType: .alert, to: deviceToken)
+        let deviceToken = "734771350c4beb54e9295868065b73c287e9f1fde2c9bad337b4321ba0c67838"
+        try await apns.send(aps, pushType: .alert, to: deviceToken, on: .sandbox)
         return .ok
     }
 }

@@ -22,6 +22,12 @@ services:
     image: notifications:latest
     build:
       context: .
+      network: host
+      args:
+        - http_proxy=http://127.0.0.1:1087
+        - https_proxy=http://127.0.0.1:1087
+    env_file:
+      - ./env
     environment:
       <<: *shared_environment
     ports:
